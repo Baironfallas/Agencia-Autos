@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.API", "NLayer.Architecture.API\NLayer.Architecture.API.csproj", "{1773EBA5-1497-48B8-B183-5DB2B8A3020B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.Bussines", "NLayer.Architecture.Bussines\NLayer.Architecture.Bussines.csproj", "{629243C7-7035-4D3C-B634-3B810B3E7EC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1773EBA5-1497-48B8-B183-5DB2B8A3020B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1773EBA5-1497-48B8-B183-5DB2B8A3020B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1773EBA5-1497-48B8-B183-5DB2B8A3020B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
