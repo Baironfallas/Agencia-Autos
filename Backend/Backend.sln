@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.API", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.Bussines", "NLayer.Architecture.Bussines\NLayer.Architecture.Bussines.csproj", "{629243C7-7035-4D3C-B634-3B810B3E7EC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.Bussines.Models", "NLayer.Architecture.Bussines.Models\NLayer.Architecture.Bussines.Models.csproj", "{8F3E51EB-3E7E-4FFD-97EF-7DBBDEA41787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Architecture.Data", "NLayer.Architecture.Data\NLayer.Architecture.Data.csproj", "{77F52429-899E-4551-AD0D-BEB2797B7744}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{629243C7-7035-4D3C-B634-3B810B3E7EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3E51EB-3E7E-4FFD-97EF-7DBBDEA41787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3E51EB-3E7E-4FFD-97EF-7DBBDEA41787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3E51EB-3E7E-4FFD-97EF-7DBBDEA41787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3E51EB-3E7E-4FFD-97EF-7DBBDEA41787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F52429-899E-4551-AD0D-BEB2797B7744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F52429-899E-4551-AD0D-BEB2797B7744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F52429-899E-4551-AD0D-BEB2797B7744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F52429-899E-4551-AD0D-BEB2797B7744}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
