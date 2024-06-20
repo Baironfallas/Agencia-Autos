@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Marca": "Porsche",
+    "Modelo": "911",
+    "AnnioModelo": 2023,
+    "Precio": 150000.0,
+    "NumSerie": 987654,
+    "Descripcion": "Icono deportivo, alta velocidad y precisión"
+  },
+  {
+    "Marca": "Ferrari",
+    "Modelo": "488 GTB",
+    "AnnioModelo": 2022,
+    "Precio": 300000.0,
+    "NumSerie": 654321,
+    "Descripcion": "Superdeportivo, potencia y diseño aerodinámico"
+  },
+  {
+    "Marca": "Lamborghini",
+    "Modelo": "Huracán",
+    "AnnioModelo": 2023,
+    "Precio": 250000.0,
+    "NumSerie": 321098,
+    "Descripcion": "Exótico y potente, rendimiento de pista"
+  }
+]

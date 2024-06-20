@@ -1,0 +1,37 @@
+﻿[
+  {
+    "Id": 1,
+    "Nombre": "Juan Pérez",
+    "Correo": "juan@example.com",
+    "Direccion": "Calle Principal 123",
+    "NumTelefono": 123456789
+  },
+  {
+    "Id": 2,
+    "Nombre": "María García",
+    "Correo": "maria@example.com",
+    "Direccion": "Avenida Central 456",
+    "NumTelefono": 987654321
+  },
+  {
+    "Id": 3,
+    "Nombre": "Pedro Ramirez",
+    "Correo": "pedro@example.com",
+    "Direccion": "Av. Libertadores 789",
+    "NumTelefono": 456789123
+  },
+  {
+    "Id": 4,
+    "Nombre": "Ana Martínez",
+    "Correo": "ana@example.com",
+    "Direccion": "Calle Robles 321",
+    "NumTelefono": 321654987
+  },
+  {
+    "Id": 5,
+    "Nombre": "Carlos López",
+    "Correo": "carlos@example.com",
+    "Direccion": "Av. Bolívar 654",
+    "NumTelefono": 654987321
+  }
+]

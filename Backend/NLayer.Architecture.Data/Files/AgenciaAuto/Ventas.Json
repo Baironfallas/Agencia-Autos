@@ -1,0 +1,22 @@
+﻿[
+  {
+    "NumSerieVehiculo": 123456,
+    "IdCliente": 1
+  },
+  {
+    "NumSerieVehiculo": 789012,
+    "IdCliente": 2
+  },
+  {
+    "NumSerieVehiculo": 456789,
+    "IdCliente": 3
+  },
+  {
+    "NumSerieVehiculo": 321654,
+    "IdCliente": 4
+  },
+  {
+    "NumSerieVehiculo": 654987,
+    "IdCliente": 5
+  }
+]
