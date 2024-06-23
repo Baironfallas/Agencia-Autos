@@ -1,7 +1,7 @@
 ﻿
 namespace NLayer.Architecture.Data;
 
-public interface IFielManager
+public interface IFileRepository
 {
     //metodo para leer un json
     Task<T> ReadJsonFileAsync<T>(string filePath);
