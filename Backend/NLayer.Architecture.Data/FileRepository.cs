@@ -12,23 +12,18 @@ public class FileRepository : IFileRepository
         return JsonConvert.DeserializeObject<T>(json);
     }
 
-    public async Task<List<T>> ReadListJsonFileAsync<T>(string filePath)
+    public async Task<List<T>> ReadListJsonAsync<T>(string filePath)
     {
         using StreamReader reader = new StreamReader(filePath);
         string list = await reader.ReadToEndAsync();
         return JsonConvert.DeserializeObject<List<T>>(list);
     }
 
-    public Task WriteJsonFileAsync<T>(string path, T data)
-    {
-        throw new NotImplementedException();
-    }
-
     //metodo para escribir un objeto en un json
-    public async Task WriteJsonFile<T>(string filePath, T data)
+    public async Task WriteJsonFileAsync<T>(string filePath, T data)
     {
-        using StreamWriter Writer = new StreamWriter(filePath);
         string json = JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.Indented);
+        using StreamWriter Writer = new StreamWriter(filePath);
         await Writer.WriteAsync(json);
     }
     
