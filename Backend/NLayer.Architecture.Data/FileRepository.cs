@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace NLayer.Architecture.Data;
 
-public class FileRepositories : IFielManager
+public class FileRepository : IFileRepository
 {
     public async Task<T> ReadJsonFileAsync<T>(string filePath)
     {
