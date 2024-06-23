@@ -15,17 +15,21 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
         FolderPath = $"{configuration["Folders:AgenciaAuto"]}";
         _VehiculoVirtualPath = FolderPath + _VehiculoVirtualPath;
     }
+
+
     public async Task<List<Vehiculo>> GetVehiculos()
     {
         return await ReadJsonFileAsync<List<Vehiculo>>(_VehiculoVirtualPath);
     }
+
+
     public async Task AddVehiculo(Vehiculo vehiculo)
     {
         List<Vehiculo> elementos = await ReadJsonFileAsync<List<Vehiculo>>(_VehiculoVirtualPath);
-        if (elementos == null)
+        if (elementos != null)
         {
             elementos.Add(vehiculo);
-            await WriteJsonFile(_VehiculoVirtualPath, elementos);
+            await WriteJsonFileAsync(_VehiculoVirtualPath, elementos);
         }
     }
     public async Task<bool> UpdateVehiculo(IEnumerable<Vehiculo> vehiculo)
