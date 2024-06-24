@@ -21,6 +21,7 @@ public class ReporteAgenciaAutoController : ControllerBase
         return await _reporteAgenciaServices.GetReporteAgencia();
     }
 
+
     [HttpPost("AddVehiculo",Name ="AddVehiculo")]
     public async Task AddVehiculo(Vehiculo vehiculo)
     {
@@ -36,5 +37,20 @@ public class ReporteAgenciaAutoController : ControllerBase
     public async Task <IActionResult> DeleteVehiculo()
     {
         return await _reporteAgenciaServices.DeleteVehiculo() ? Ok() : NotFound();
+    }
+    [HttpPost("AddCliente",Name ="AddCliente")]
+    public async Task Add(Cliente cliente)
+    {
+        await _reporteAgenciaServices.AddCliente(cliente);
+    }
+    [HttpPut("UpdateCliente", Name = "UpdateCliente")]
+    public async Task<IActionResult> UpdateCliente(IEnumerable<Cliente> updateCliente)
+    {
+        return await _reporteAgenciaServices.UpdateCliente(updateCliente) ? Ok() : NotFound();
+    }
+    [HttpDelete("DeleteCliente", Name = "Cliente")]
+    public async Task<IActionResult> DeleteCliente()
+    {
+        return await _reporteAgenciaServices.DeleteCliente() ? Ok() : NotFound();
     }
 }

@@ -7,6 +7,7 @@ namespace DataAccess.Layer.FileRepositories;
 public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
 {
     private string _VehiculoVirtualPath = "Vehiculos.Json";
+    private string _ClienteVirtualPath = "Cliente.Json";
 
     private string FolderPath { get; set; }
 
@@ -14,6 +15,7 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
     {
         FolderPath = $"{configuration["Folders:AgenciaAuto"]}";
         _VehiculoVirtualPath = FolderPath + _VehiculoVirtualPath;
+        _ClienteVirtualPath = FolderPath + _ClienteVirtualPath;
     }
 
 
@@ -53,6 +55,47 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
             await WriteJsonFileAsync(_VehiculoVirtualPath, elementos);
             return true;
         }catch(Exception genericExecption)
+        {
+            return false;
+        }
+    }
+
+    public async Task<List<Cliente>> GetClientes()
+    {
+        return await ReadJsonFileAsync<List<Cliente>>(_ClienteVirtualPath);
+    }
+
+    public async Task AddCliente(Cliente cliente)
+    {
+        List<Cliente> elementos = await ReadJsonFileAsync<List<Cliente>>(_ClienteVirtualPath);
+        if(cliente != null)
+        {
+            elementos.Add(cliente);
+            await WriteJsonFileAsync(_ClienteVirtualPath, elementos);
+        }
+    }
+    public async Task<bool> UpdateCliente(IEnumerable<Cliente> cliente)
+    {
+        List<Cliente> elementos = cliente.ToList();
+        try
+        {
+            await WriteJsonFileAsync(_ClienteVirtualPath, elementos);
+            return true;
+        }
+        catch(Exception genericExecption)
+        {
+            return false;
+        }
+    }
+    public async Task<bool> DeleteCliente()
+    {
+        List<Cliente> elementos = new();
+        try
+        {
+            await WriteJsonFileAsync(_ClienteVirtualPath, elementos);
+            return true;
+        }
+        catch(Exception genericExecption)
         {
             return false;
         }
