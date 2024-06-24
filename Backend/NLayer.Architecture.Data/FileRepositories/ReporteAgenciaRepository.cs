@@ -8,6 +8,7 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
 {
     private string _VehiculoVirtualPath = "Vehiculos.Json";
     private string _ClienteVirtualPath = "Cliente.Json";
+    private string _VentaVirtualPath = "Ventas.Json";
 
     private string FolderPath { get; set; }
 
@@ -16,6 +17,7 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
         FolderPath = $"{configuration["Folders:AgenciaAuto"]}";
         _VehiculoVirtualPath = FolderPath + _VehiculoVirtualPath;
         _ClienteVirtualPath = FolderPath + _ClienteVirtualPath;
+        _VentaVirtualPath = FolderPath + _VentaVirtualPath;
     }
 
 
@@ -96,6 +98,49 @@ public class ReporteAgenciaRepository: FileRepository,IReporteAgenciaRepository
             return true;
         }
         catch(Exception genericExecption)
+        {
+            return false;
+        }
+    }
+
+    public async Task<List<Ventas>> GetVentas()
+    {
+         return await ReadJsonFileAsync<List<Ventas>>(_VentaVirtualPath);
+    }
+    
+    public async Task AddVentas(Ventas ventas)
+    {
+        List<Ventas> elementos = await ReadJsonFileAsync<List<Ventas>>(_VentaVirtualPath);
+        if(elementos != null)
+        {
+            elementos.Add(ventas);
+            await WriteJsonFileAsync(_ClienteVirtualPath, ventas);
+        }
+    }
+
+    public async Task<bool> UpdateVentas(IEnumerable<Ventas> ventas)
+    {
+        List<Ventas> elementos = ventas.ToList();
+        try
+        {
+            await WriteJsonFileAsync(_VentaVirtualPath, elementos);
+            return true;
+        }
+        catch(Exception ex)
+        {
+            return false;
+        }
+    }
+
+    public async Task<bool> DeleteVenta()
+    {
+        List<Ventas> elementos = new();
+        try
+        {
+            await WriteJsonFileAsync(_ClienteVirtualPath, elementos);
+            return true;
+        }
+        catch(Exception ex)
         {
             return false;
         }
