@@ -11,4 +11,7 @@ public interface IReporteAgenciaServices
     Task<bool> UpdateVehiculo(IEnumerable<Vehiculo> vehiculo);
 
     Task<bool> DeleteVehiculo();
+    Task AddCliente(Cliente cliente);
+    Task<bool> UpdateCliente(IEnumerable<Cliente> cliente);
+    Task<bool> DeleteCliente();
 }
