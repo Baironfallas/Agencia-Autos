@@ -1,6 +1,6 @@
 ﻿
 using NLayer.Architecture.Bussines.ReporteAgencia;
-using System.Net;
+
 
 namespace DataAccess.Layer.FileRepositories;
 
@@ -15,5 +15,10 @@ public interface IReporteAgenciaRepository
     Task AddCliente(Cliente cliente);
     Task<bool> UpdateCliente(IEnumerable<Cliente> cliente);
     Task<bool> DeleteCliente();
+
+    Task<List<Ventas>> GetVentas();
+    Task AddVentas(Ventas ventas);
+    Task<bool> UpdateVentas(IEnumerable<Ventas> ventas);
+    Task<bool> DeleteVenta();
 
 }
